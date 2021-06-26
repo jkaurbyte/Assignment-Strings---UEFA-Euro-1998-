@@ -1,0 +1,40 @@
+scorer_first_goal = 'Ruud Gullit'
+scorer_second_goal = 'Marco van Basten'
+# tijdvandescores
+goal_0 = 32
+goal_1 = 54
+scorers = (scorer_first_goal + '  ' + str(goal_0)  +  ',' + '  ' + scorer_second_goal + '  ' + str(goal_1))
+print(scorers)
+firstplayer = {'name': scorer_first_goal, 'goaltime' : goal_0}
+secondplayer = {'name': scorer_second_goal, 'goaltime' : goal_1}
+report = f"{firstplayer['name']} scored in the {firstplayer['goaltime']}nd minute, {secondplayer['name']} scored in the {secondplayer['goaltime']}th minute"
+print(report)
+
+player = 'Ronald Koeman'
+# first_name: use slicing and the find-method (help) to isolate and store the player's first name.
+space_location = player.find(' ')
+print(space_location)
+#last_name_len: use find, slicing and len to isolate and store the length of their last name.
+first_name_sliced = player[:space_location]
+start_last_name = player.find('Koeman')
+last_name_sliced = player[start_last_name:]
+print(first_name_sliced, last_name_sliced)
+
+
+last_name_len = len(last_name_sliced)
+print(last_name_len)
+# name_short: isolate and store the player's name in this format: 'R. Koeman'
+name_short = first_name_sliced[0] + '.'  + last_name_sliced
+print(name_short)
+
+#variabelenminmogelijkhouden, dus variabelfirstnamegebruiken, spatie weghalen om format te behouden dus Ronald ipv Ronald_- had ook in begin gekunt)
+first_name_len = len(first_name_sliced)
+chant = (first_name_sliced + '!'+' ') * first_name_len 
+
+print(chant)
+
+print(chant.strip(' '))
+
+good_chant_iso = chant[0:-1]   #isoleren van tekens die ik wel wil behouden dus tm laatste !
+good_chant = (good_chant_iso[-1] != ' ')
+print(good_chant)
